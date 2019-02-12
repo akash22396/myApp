@@ -1,0 +1,59 @@
+.carousel-item {
+    max-height: 540px;
+    overflow: hidden;
+}
+
+.nav-custom {
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    width: 160px;
+    height: auto;
+}
+
+.nav-custom .nav-item .nav-link {
+    color: rgb(39, 57, 150);
+    font-weight: 600;
+    padding: 12px 18px;
+    transition: .5s;
+}
+
+.nav-link:hover {
+    /* transition-delay: .5s; */
+    color: rgb(248, 14, 14) !important;
+}
+
+.submenu {
+    background-color: white;
+    width: 100%;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    margin-left: 18px;
+    display: none;
+    /* top: 0; */
+    /* display: none; */
+}
+
+.submenu li {
+    display: block;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s
+}
+
+.submenu li:hover {
+    background-color: #f2f2f2;
+}
+
+.submenu li a {
+    padding: 10px;
+    text-decoration: none;
+}
+
+.submenu li a:hover {}
+
+.dropdown:hover .submenu {
+    display: block !important;
+}
+
+.btn-outline {}

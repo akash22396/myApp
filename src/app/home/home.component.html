@@ -1,0 +1,13 @@
+<div class='container'>
+    <h4 class='text-center'>{{ ourservice }}</h4>
+    <div class="row">
+        <div *ngFor='let os of ourServices' class="col-md-3 col-sm-6 col-12">
+            <div class='text-center'>
+                <p><i class='{{ os.img }}'></i></p>
+                <h6>{{ os.name }}</h6>
+                <p>{{ os.desc }}</p>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,59 @@
+<nav class="navbar navbar-expand-lg sticky-top bg-white nav-custom">
+    <div class='container'>
+        <a class='navbar-brand' [routerLink]="['/home']" routerLinkActive="router-link-active">
+          {{logo}}
+          <!-- <img src='{{logo}}' class='logo'> -->
+        </a>
+        <button type='button' class='navbar-toggler' data-toggle="collapse" data-target='#navmenu' aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
+      <i class='fa fa-1x fa-bars' ></i>
+    </button>
+        <div class='collapse navbar-collapse' id='navmenu'>
+            <ul class='navbar-nav ml-auto mt-2 mt-lg-0'>
+                <li class='nav-item active'> <a class='nav-link' [routerLink]="['/home']">Home</a></li>
+                <li class='nav-item dropdown'> <a class='nav-link dropdown-toggle' data-target='dropdown-menu' href='javascript:void(0)'>Products & Services</a>
+                    <!-- [routerLink]="['/products']" -->
+                    <ul class='list-unstyled submenu' id='dropdown'>
+                        <li><a class='nav-link' href="#">Dropdown1</a></li>
+                        <li><a class='nav-link' href="#">Dropdown2</a></li>
+                        <li><a class='nav-link' href="#">Dropdown3</a></li>
+                        <li><a class='nav-link' href="#">Dropdown4</a></li>
+
+                    </ul>
+
+                </li>
+                <li class='nav-item '> <a class='nav-link' [routerLink]="['/aboutus']">About US</a></li>
+                <li class='nav-item '> <a class='nav-link' [routerLink]="['/customers']">Customers</a></li>
+                <li class='nav-item '> <a class='nav-link' [routerLink]="['/blog']">Blog</a></li>
+                <li class='nav-item '> <a class='nav-link  btn-outline' [routerLink]="['/enquery']">Enquery</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+    <div class="carousel-inner">
+        <!-- <div class="carousel-item active ">
+            <img src="../../assets/img/3.png" class="d-block w-100 img-fluid" alt="...">
+        </div> -->
+        <div *ngFor='let slide of sliderInfo' class="{{slide.class}} ">
+            <img src="{{slide.imgUrl}}" class="d-block w-100 " alt="{{imgHeading}}">
+            <!-- <div class="carousel-caption d-none d-md-block">
+                <h5>...</h5>
+                <p>...</p>
+            </div> -->
+        </div>
+        <!-- <div class="carousel-item">
+            <img src="../../assets/img/2.png " class="d-block w-100 img-fluid " alt="... ">
+        </div>
+        <div class="carousel-item ">
+            <img src="../../assets/img/3.png" class="d-block w-100 img-fluid" alt="...">
+        </div> -->
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>

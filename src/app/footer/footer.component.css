@@ -1,0 +1,18 @@
+.custom-footer {
+    padding: 30px 15px 20px 15px;
+}
+
+.sideline {
+    border-right: 1px solid #eee7e7fb;
+    height: 100%;
+}
+
+@media screen and (max-width:768px) {
+    .sideline {
+        border-right: none !important;
+        height: 100%;
+    }
+    .custom-footer {
+        padding: 10px 15px 0px 15px;
+    }
+}

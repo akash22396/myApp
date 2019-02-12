@@ -1,0 +1,28 @@
+<footer class="footer bg-light">
+    <div class="container  custom-footer">
+        <div class="row text-left">
+            <div *ngFor='let fot of footerNav ' class="col-md-4 col-sm-4 col-12">
+                <h5>{{ fot.head | uppercase }}</h5>
+                <ul class="list-unstyled">
+                    <li class='{{fot.class}}' *ngIf='fot.aboutus'>{{fot.aboutus}} <a [routerLink]="['/aboutus']" *ngIf='fot.aboutus '>more..</a></li>
+                    <li *ngFor='let link of fot.links' class='{{fot.class}}'> <a routerLink='{{link.url}}'>{{link.urlName}}</a></li>
+
+                    <li>{{fot.cmpName | uppercase}}<br/> {{fot.add1 | uppercase}}<br/> {{fot.add2 | uppercase}}<br/> {{fot.contactno | uppercase}}</li>
+                </ul>
+
+
+            </div>
+            <!-- <div class="col-md-4">
+                <h5>QUICK LINK</h5>
+            </div>
+            <div class="col-md-4">
+                <h5>CONTACT US</h5>
+            </div> -->
+
+        </div>
+    </div>
+    <div class='text-center text-white bg-dark '>
+        {{ copyrightContent }}
+    </div>
+
+</footer>
